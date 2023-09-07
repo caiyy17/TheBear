@@ -1,0 +1,36 @@
+function SetupEvents(manager)
+    -- manager:TriggerEvent("GameStarted")
+    -- 在这里你可以配置和调用其他的事件
+end
+
+function Move(params)
+    local object = CS.UnityEngine.GameObject.Find(params.objectName)
+    if object then
+        local endPosition = CS.UnityEngine.Vector3(params.endpoint[1], params.endpoint[2], params.endpoint[3])  -- 目标位置
+        object.transform:DOLocalMove(endPosition, params.duration)  -- 在 2 秒内移动到目标位置
+    end
+end
+
+function PlayAnimation(params)
+    local object = CS.UnityEngine.GameObject.Find(params.objectName)
+    if object then
+        local animator = object:GetComponent("Animator")
+        if animator then
+            animator:Play(params.animationName)
+        end
+    end
+end
+
+function HideObject(params)
+    local object = CS.UnityEngine.GameObject.Find(params.objectName)
+    if object then
+        object:SetActive(false)
+    end
+end
+
+function ShowObject(params)
+    local object = CS.UnityEngine.GameObject.Find(params.objectName)
+    if object then
+        object:SetActive(true)
+    end
+end
