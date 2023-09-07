@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomCursor : MonoBehaviour
@@ -8,12 +9,19 @@ public class CustomCursor : MonoBehaviour
     public float cursorScale = 1.0f; // The scale of the cursor, in case you want to use a smaller or larger cursor graphic than the original.
     public CursorMode cursorMode = CursorMode.Auto; // Use auto to let Unity handle the cursor size based on the platform, or ForceSoftware if you want to force the cursor size.
 
+    private List<string> hoverObjects = new List<string>();
+
     void Start()
     {
         // Set the custom cursor
         cursorTexture = Resize(cursorTexture, cursorScale);
         hoverTexture = Resize(hoverTexture, cursorScale);
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+    }
+    
+    void Update()
+    {
+        //find where the mouse is hover on
     }
     
     public static Texture2D Resize(Texture2D source, float scale)
@@ -30,5 +38,28 @@ public class CustomCursor : MonoBehaviour
         nTex.Apply();
         RenderTexture.active = null;
         return nTex;
+    }
+    
+    public void RegisterHover(string obj)
+    {
+        hoverObjects.Add(obj);
+    }
+    
+    public void UnregisterHover(string obj)
+    {
+        hoverObjects.Remove(obj);
+    }
+    
+    public void HandleHover(string obj)
+    {
+        //if obj is in hoverObjects, change cursor to hoverTexture
+        if (hoverObjects.Contains(obj))
+        {
+            Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
+        }
+        else
+        {
+            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        }
     }
 }

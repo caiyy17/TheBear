@@ -31,23 +31,29 @@ public class CollisionManager : MonoBehaviour
         //检测方向键右
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            // 通知 LuaEventManager
-            LuaEventManager.Instance.TriggerEvent("Any", "Any");
+            // 通知 EventManager
+            // Debug.Log("RightArrow");
+            EventManager.Instance.TriggerEvent("Any", "Any");
         }
     }
 
     public void RegisterCollision(string objectName)
     {
         Collisions.Add(objectName);
+        // 通知 EventManager
         // Debug.Log($"物体{objectName}被点击了!");
-        // 通知 LuaEventManager
-        LuaEventManager.Instance.TriggerEvent("Click", objectName);
+        EventManager.Instance.TriggerEvent("Click", objectName);
     }
 
     public void UnregisterCollision(string objectName)
     {
         // 假设 Collision2DInfo 实现了相等性检查
         Collisions.Remove(objectName);
+    }
+    
+    public void HandleHover(string objectName)
+    {
+        EventManager.Instance.customCursor.HandleHover(objectName);
     }
 }
 

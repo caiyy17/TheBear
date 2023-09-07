@@ -1079,9 +1079,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588829736}
-  - component: {fileID: 588829735}
   - component: {fileID: 588829737}
   - component: {fileID: 588829738}
+  - component: {fileID: 588829739}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1089,20 +1089,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &588829735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 588829734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd6883f10f5c43f2be7c09f4e67ab113, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EventConfig: {fileID: 4900000, guid: b7e1d3d4e276472f992d81c98ac28195, type: 3}
-  EventsTree: {fileID: 4900000, guid: 9411b635c5f44e3eba81f40e1b49a5a2, type: 3}
 --- !u!4 &588829736
 Transform:
   m_ObjectHideFlags: 0
@@ -1147,6 +1133,18 @@ MonoBehaviour:
   hotSpot: {x: 10, y: 10}
   cursorScale: 0.05
   cursorMode: 0
+--- !u!114 &588829739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588829734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e91709b0fab482e83d6ddf320c7a676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,724 @@
+{
+    "events": [
+        {
+            "eventName": "StartGame",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "1-长条背景"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "1-长条背景"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "1-长条背景"
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "1-长条背景",
+                        "startpoint": [
+                            0,
+                            -10,
+                            0
+                        ],
+                        "endpoint": [
+                            0,
+                            10,
+                            0
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "2-默认口罩",
+                        "startpoint": [
+                            0,
+                            -20,
+                            -1
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "2-默认小熊",
+                        "startpoint": [
+                            0,
+                            -20,
+                            -0.5
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "4-果子1（打到小熊）-1",
+                        "startpoint": [
+                            0,
+                            -20,
+                            -0.5
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "4-果子2（落下打zzz）-1",
+                        "startpoint": [
+                            0,
+                            -20,
+                            -0.5
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "DiscoverTheBear1"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "DiscoverTheBear1",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "2-默认口罩"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "2-默认口罩"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "2-默认口罩",
+                        "animationName": "2-口罩上下浮动序列",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "DiscoverTheBear2"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "DiscoverTheBear2",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "2-默认口罩"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "2-默认口罩",
+                        "animationName": "2-口罩上下浮动序列",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "DiscoverTheBear3"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "DiscoverTheBear3",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "2-默认口罩"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "2-默认口罩"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "2-默认口罩",
+                        "animationName": "2-口罩飘走序列",
+                        "duration": 4
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 4
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "2-默认口罩"
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "3-zzz飘出-1",
+                        "startpoint": [
+                            0,
+                            -20,
+                            -0.5
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "3-zzz飘出-1",
+                        "animationName": "3-zzz飘出序列",
+                        "duration": 4
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "BearInteraction1"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "BearInteraction1",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "2-默认小熊"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "2-默认小熊"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "2-默认小熊",
+                        "animationName": "3-熊动耳朵序列",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "BearInteraction2"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "BearInteraction2",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "2-默认小熊"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "2-默认小熊",
+                        "animationName": "3-熊动耳朵序列",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "BearInteraction3"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "BearInteraction3",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "2-默认小熊"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "2-默认小熊"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "2-默认小熊",
+                        "animationName": "3-小熊翻身序列",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "BearInteractionFruit1"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "BearInteractionFruit1",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "4-果子1（打到小熊）-1"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "4-果子1（打到小熊）-1"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "4-果子1（打到小熊）-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "4-果子1（打到小熊）-1",
+                        "animationName": "4-果子1序列",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "2-默认小熊"
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "BearInteractionFruit2"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "BearInteractionFruit2",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "4-果子2（落下打zzz）-1"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "4-果子2（落下打zzz）-1"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "4-果子2（落下打zzz）-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "4-果子2（落下打zzz）-1",
+                        "animationName": "4-果子2序列",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "3-zzz飘出-1"
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2.5
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "5-小熊醒来-1",
+                        "startpoint": [
+                            0,
+                            -20,
+                            -0.5
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "4-果子1（打到小熊）-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "4-果子2（落下打zzz）-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "5-小熊醒来-1",
+                        "animationName": "4-小熊醒来序列",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "5-回忆气泡出现-1",
+                        "startpoint": [
+                            0,
+                            -20,
+                            -0.8
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.8
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "5-回忆气泡出现-1",
+                        "animationName": "5-回忆气泡出现序列",
+                        "duration": 1.2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1.2
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "Bubble1"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "Bubble1",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "5-回忆气泡出现-1"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "5-回忆气泡出现-1"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "5-回忆气泡出现-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "5-回忆气泡出现-1",
+                        "animationName": "5-回忆气泡拉大序列",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "7-背包背影",
+                        "startpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "7-城市背景1",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.89
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.89
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "Bubble2"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "Bubble2",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "7-背包背影"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "7-背包背影"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "7-城市背景2",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.9
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.9
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "7-城市背景1"
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "Bubble3"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "Bubble3",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "7-背包背影"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "7-城市背景3",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.91
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.91
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "7-城市背景2"
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "Bubble4"
+                    }
+                }
+            ]
+        }
+    ]
+}
