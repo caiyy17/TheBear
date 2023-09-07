@@ -221,6 +221,11 @@ public class EventManager : MonoBehaviour
                 }
                 break;
             }
+            case "quitGame":
+            {
+                Application.Quit();
+                break;
+            }
             default:
             {
                 Debug.Log($"Action {actionType} not implemented!");

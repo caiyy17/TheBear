@@ -717,6 +717,11 @@
                     "actionParams": {
                         "eventName": "Bubble4"
                     }
+                },
+                {
+                    "actionType": "quitGame",
+                    "actionParams": {
+                    }
                 }
             ]
         }
