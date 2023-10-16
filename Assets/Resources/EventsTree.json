@@ -717,10 +717,314 @@
                     "actionParams": {
                         "eventName": "Bubble4"
                     }
+                }
+            ]
+        },
+        {
+            "eventName": "Bubble4",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "7-背包背影"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "8-小熊",
+                        "startpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "duration": 1
+                    }
                 },
                 {
-                    "actionType": "quitGame",
+                    "actionType": "ShowObject",
                     "actionParams": {
+                        "objectName": "8-背景",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.92
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.92
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "7-背包背影"
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "7-城市背景3"
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "Bubble5"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "Bubble5",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "8-小熊"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "10-拖拽lv3（落下）-1",
+                        "startpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "10-拖拽lv3（落下）-1",
+                        "animationName": "10-拖拽lv3（落下）",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "8-小熊"
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "10-拖拽lv3（落下）-1"
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "Bubble6"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "Bubble6",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "8-背景"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "10-回忆气泡缩小-1",
+                        "startpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "5-回忆气泡出现-1"
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "8-背景"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "10-回忆气泡缩小-1",
+                        "animationName": "10-回忆气泡缩小",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "10-回忆气泡缩小-1"
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "10-小熊回忆结束-1",
+                        "startpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "5-小熊醒来-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "10-小熊回忆结束-1",
+                        "animationName": "10-小熊回忆结束",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "Bubble7"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "Bubble7",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "10-小熊回忆结束-1"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "地图聚集-1",
+                        "startpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -1
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "10-小熊回忆结束-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "地图聚集-1",
+                        "animationName": "地图聚集",
+                        "duration": 3
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "场景A",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.9
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.9
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 3
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "1-长条背景"
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "stage1"
                     }
                 }
             ]

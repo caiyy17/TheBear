@@ -16,6 +16,7 @@ public class EventManager : MonoBehaviour
     private float timer = 0;
     
     public CustomCursor customCursor;
+    int DEBUG = 0;
 
     void Awake()
     {
@@ -159,6 +160,10 @@ public class EventManager : MonoBehaviour
             {
                 float duration = objectToFloat(actionParams["duration"]);
                 timer = duration;
+                if(DEBUG == 1)
+                {
+                    timer = 0;
+                }
                 break;
             }
             case "Move":
