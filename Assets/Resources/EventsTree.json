@@ -45,12 +45,12 @@
                         "startpoint": [
                             0,
                             -20,
-                            -1
+                            -0.6
                         ],
                         "endpoint": [
                             0,
                             0,
-                            -1
+                            -0.6
                         ],
                         "duration": 4
                     }
@@ -218,12 +218,6 @@
                     }
                 },
                 {
-                    "actionType": "HideObject",
-                    "actionParams": {
-                        "objectName": "2-默认口罩"
-                    }
-                },
-                {
                     "actionType": "Move",
                     "actionParams": {
                         "objectName": "3-zzz飘出-1",
@@ -273,6 +267,23 @@
                     "actionType": "AddHover",
                     "actionParams": {
                         "objectName": "2-默认小熊"
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "2-默认口罩",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.6
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.3
+                        ],
+                        "duration": 0
                     }
                 }
             ],
@@ -730,6 +741,12 @@
             ],
             "actions": [
                 {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "7-背包背影"
+                    }
+                },
+                {
                     "actionType": "ShowObject",
                     "actionParams": {
                         "objectName": "8-小熊",
@@ -796,8 +813,20 @@
                 "objectName": "8-小熊"
             },
             "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "8-小熊"
+                    }
+                }
             ],
             "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "8-小熊"
+                    }
+                },
                 {
                     "actionType": "ShowObject",
                     "actionParams": {
@@ -856,8 +885,20 @@
                 "objectName": "8-背景"
             },
             "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "8-背景"
+                    }
+                }
             ],
             "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "8-背景"
+                    }
+                },
                 {
                     "actionType": "ShowObject",
                     "actionParams": {
@@ -959,8 +1000,20 @@
                 "objectName": "10-小熊回忆结束-1"
             },
             "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "10-小熊回忆结束-1"
+                    }
+                }
             ],
             "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "10-小熊回忆结束-1"
+                    }
+                },
                 {
                     "actionType": "ShowObject",
                     "actionParams": {
@@ -1019,6 +1072,12 @@
                     "actionType": "HideObject",
                     "actionParams": {
                         "objectName": "1-长条背景"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "2-默认口罩"
                     }
                 },
                 {
