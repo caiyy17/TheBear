@@ -18,7 +18,7 @@ public class ClickObject : MonoBehaviour
 
     private void OnMouseOver()
     {
-        HandleMouseOver();
+        // HandleMouseOver();
     }
 
     void HandleClickDown()
@@ -49,17 +49,17 @@ public class ClickObject : MonoBehaviour
         CollisionManager.Instance.UnregisterCollision(_name);
     }
     
-    void HandleMouseOver()
-    {
-        string _name;
-        if (objectName == "")
-        {
-            _name = gameObject.name;
-        }
-        else
-        {
-            _name = objectName;
-        }
-        CollisionManager.Instance.HandleHover(_name);
-    }
+    // void HandleMouseOver()
+    // {
+    //     string _name;
+    //     if (objectName == "")
+    //     {
+    //         _name = gameObject.name;
+    //     }
+    //     else
+    //     {
+    //         _name = objectName;
+    //     }
+    //     CollisionManager.Instance.HandleHover(_name);
+    // }
 }

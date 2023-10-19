@@ -28,8 +28,26 @@ public class CollisionManager : MonoBehaviour
 
     private void Update()
     {
-        //检测方向键右
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        //用射线检测检测鼠标位置与box2d collider的碰撞
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+        if(hit.collider != null)
+        {
+            // Debug.Log(hit.collider.gameObject.name);
+            HandleMouse(hit.collider.gameObject.name, 0);
+            //如果鼠标左键正在被按住
+            if (Input.GetMouseButton(0))
+            {
+                HandleMouse(hit.collider.gameObject.name, 1);
+            }
+        }
+        else
+        {
+            HandleMouse(null, 0);
+        }
+        
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             // 通知 EventManager
             // Debug.Log("RightArrow");
@@ -51,9 +69,9 @@ public class CollisionManager : MonoBehaviour
         Collisions.Remove(objectName);
     }
     
-    public void HandleHover(string objectName)
+    public void HandleMouse(string objectName, int state)
     {
-        EventManager.Instance.customCursor.HandleHover(objectName);
+        EventManager.Instance.customCursor.HandleMouse(objectName, state);
     }
 }
 

@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CustomCursor : MonoBehaviour
 {
-    public Texture2D cursorTexture; // Drag your custom cursor texture here in the inspector
-    public Texture2D hoverTexture; // Drag your custom cursor texture here in the inspector
+    [FormerlySerializedAs("cursorTexture")] public Texture2D hoverTexture; // Drag your custom cursor texture here in the inspector
+    [FormerlySerializedAs("hoverTexture")] public Texture2D selectTexture; // Drag your custom cursor texture here in the inspector
     public Vector2 hotSpot = Vector2.zero; // The "active spot" of the cursor, usually the point or tip of the cursor arrow.
     public float cursorScale = 1.0f; // The scale of the cursor, in case you want to use a smaller or larger cursor graphic than the original.
     public CursorMode cursorMode = CursorMode.Auto; // Use auto to let Unity handle the cursor size based on the platform, or ForceSoftware if you want to force the cursor size.
@@ -14,9 +15,9 @@ public class CustomCursor : MonoBehaviour
     void Start()
     {
         // Set the custom cursor
-        cursorTexture = Resize(cursorTexture, cursorScale);
         hoverTexture = Resize(hoverTexture, cursorScale);
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        selectTexture = Resize(selectTexture, cursorScale);
+        Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
     }
     
     void Update()
@@ -50,16 +51,26 @@ public class CustomCursor : MonoBehaviour
         hoverObjects.Remove(obj);
     }
     
-    public void HandleHover(string obj)
+    public void HandleMouse(string obj, int state)
     {
         //if obj is in hoverObjects, change cursor to hoverTexture
         if (hoverObjects.Contains(obj))
         {
-            Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
+            //hover
+            if (state == 0)
+            {
+                Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
+            }
+            //select
+            else if (state == 1)
+            {
+                Cursor.SetCursor(selectTexture, hotSpot, cursorMode);
+            }
         }
         else
         {
-            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+            //restore cursor to unity default
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }
     }
 }
