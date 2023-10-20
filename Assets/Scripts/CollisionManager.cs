@@ -47,7 +47,7 @@ public class CollisionManager : MonoBehaviour
         }
         
 
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             // 通知 EventManager
             // Debug.Log("RightArrow");

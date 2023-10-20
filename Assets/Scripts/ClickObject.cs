@@ -8,12 +8,12 @@ public class ClickObject : MonoBehaviour
     public string objectName;
     private void OnMouseDown()
     {
-        HandleClickDown();
+        // HandleClickDown();
     }
 
     private void OnMouseUpAsButton()
     {
-        HandleClickUp();
+        HandleClickDown();
     }
 
     private void OnMouseOver()
