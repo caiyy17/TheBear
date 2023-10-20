@@ -11,6 +11,7 @@ public class CustomCursor : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto; // Use auto to let Unity handle the cursor size based on the platform, or ForceSoftware if you want to force the cursor size.
 
     private List<string> hoverObjects = new List<string>();
+    private bool isSelected = false;
 
     void Start()
     {
@@ -50,27 +51,45 @@ public class CustomCursor : MonoBehaviour
     {
         hoverObjects.Remove(obj);
     }
-    
+
     public void HandleMouse(string obj, int state)
     {
-        //if obj is in hoverObjects, change cursor to hoverTexture
-        if (hoverObjects.Contains(obj))
+        //鼠标按下状态
+        if (state == 1)
         {
-            //hover
-            if (state == 0)
-            {
-                Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
-            }
-            //select
-            else if (state == 1)
+            //已被选中就继续选中
+            if (isSelected)
             {
                 Cursor.SetCursor(selectTexture, hotSpot, cursorMode);
+            }
+            else
+            {
+                //未被选中就判断是否在hoverObjects中，若在则选中
+                if (hoverObjects.Contains(obj))
+                {
+                    isSelected = true;
+                    // Debug.Log("选中");
+                    Cursor.SetCursor(selectTexture, hotSpot, cursorMode);
+                }
+                //否则不操作
             }
         }
         else
         {
-            //restore cursor to unity default
-            Cursor.SetCursor(null, Vector2.zero, cursorMode);
+            //鼠标未按下状态则取消选中状态
+            if (isSelected)
+            {
+                isSelected = false;
+            }
+            //若在hoverObjects中则显示hoverTexture
+            if (hoverObjects.Contains(obj))
+            {
+                Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
+            }
+            else
+            {
+                Cursor.SetCursor(null, Vector2.zero, cursorMode);
+            }
         }
     }
 }

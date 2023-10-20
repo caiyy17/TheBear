@@ -760,7 +760,7 @@
                             0,
                             -1
                         ],
-                        "duration": 1
+                        "duration": 0
                     }
                 },
                 {
@@ -808,25 +808,11 @@
         },
         {
             "eventName": "Bubble5",
-            "triggerType": "Click",
+            "triggerType": "Drag",
             "triggerParams": {
-                "objectName": "8-小熊"
+                "objectName": "10-拖拽lv3（落下）-1"
             },
             "preactions": [
-                {
-                    "actionType": "AddHover",
-                    "actionParams": {
-                        "objectName": "8-小熊"
-                    }
-                }
-            ],
-            "actions": [
-                {
-                    "actionType": "RemoveHover",
-                    "actionParams": {
-                        "objectName": "8-小熊"
-                    }
-                },
                 {
                     "actionType": "ShowObject",
                     "actionParams": {
@@ -845,11 +831,10 @@
                     }
                 },
                 {
-                    "actionType": "PlayAnimation",
+                    
+                    "actionType": "AddHover",
                     "actionParams": {
-                        "objectName": "10-拖拽lv3（落下）-1",
-                        "animationName": "10-拖拽lv3（落下）",
-                        "duration": 1
+                        "objectName": "10-拖拽lv3（落下）-1"
                     }
                 },
                 {
@@ -857,46 +842,25 @@
                     "actionParams": {
                         "objectName": "8-小熊"
                     }
-                },
-                {
-                    "actionType": "Wait",
-                    "actionParams": {
-                        "duration": 2
-                    }
-                },
-                {
-                    "actionType": "HideObject",
-                    "actionParams": {
-                        "objectName": "10-拖拽lv3（落下）-1"
-                    }
-                },
-                {
-                    "actionType": "RegisterEvent",
-                    "actionParams": {
-                        "eventName": "Bubble6"
-                    }
-                }
-            ]
-        },
-        {
-            "eventName": "Bubble6",
-            "triggerType": "Click",
-            "triggerParams": {
-                "objectName": "8-背景"
-            },
-            "preactions": [
-                {
-                    "actionType": "AddHover",
-                    "actionParams": {
-                        "objectName": "8-背景"
-                    }
                 }
             ],
             "actions": [
                 {
                     "actionType": "RemoveHover",
                     "actionParams": {
-                        "objectName": "8-背景"
+                        "objectName": "10-拖拽lv3（落下）-1"
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "10-拖拽lv3（落下）-1"
                     }
                 },
                 {
@@ -988,13 +952,13 @@
                 {
                     "actionType": "RegisterEvent",
                     "actionParams": {
-                        "eventName": "Bubble7"
+                        "eventName": "Bubble6"
                     }
                 }
             ]
         },
         {
-            "eventName": "Bubble7",
+            "eventName": "Bubble6",
             "triggerType": "Click",
             "triggerParams": {
                 "objectName": "10-小熊回忆结束-1"

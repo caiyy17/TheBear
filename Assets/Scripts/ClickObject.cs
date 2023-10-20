@@ -8,20 +8,15 @@ public class ClickObject : MonoBehaviour
     public string objectName;
     private void OnMouseDown()
     {
-        // HandleClickDown();
+        ;
     }
 
     private void OnMouseUpAsButton()
     {
-        HandleClickDown();
+        HandleClick();
     }
 
-    private void OnMouseOver()
-    {
-        // HandleMouseOver();
-    }
-
-    void HandleClickDown()
+    void HandleClick()
     {
         string _name;
         if (objectName == "")
@@ -32,34 +27,6 @@ public class ClickObject : MonoBehaviour
         {
             _name = objectName;
         }
-        CollisionManager.Instance.RegisterCollision(_name);
+        EventManager.Instance.TriggerEvent("Click", _name);
     }
-    
-    void HandleClickUp()
-    {
-        string _name;
-        if (objectName == "")
-        {
-            _name = gameObject.name;
-        }
-        else
-        {
-            _name = objectName;
-        }
-        CollisionManager.Instance.UnregisterCollision(_name);
-    }
-    
-    // void HandleMouseOver()
-    // {
-    //     string _name;
-    //     if (objectName == "")
-    //     {
-    //         _name = gameObject.name;
-    //     }
-    //     else
-    //     {
-    //         _name = objectName;
-    //     }
-    //     CollisionManager.Instance.HandleHover(_name);
-    // }
 }

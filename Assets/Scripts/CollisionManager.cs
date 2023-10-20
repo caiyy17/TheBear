@@ -28,22 +28,22 @@ public class CollisionManager : MonoBehaviour
 
     private void Update()
     {
+        int state = 0;
+        if (Input.GetMouseButton(0))
+        {
+            state = 1;
+        }
         //用射线检测检测鼠标位置与box2d collider的碰撞
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
         if(hit.collider != null)
         {
             // Debug.Log(hit.collider.gameObject.name);
-            HandleMouse(hit.collider.gameObject.name, 0);
-            //如果鼠标左键正在被按住
-            if (Input.GetMouseButton(0))
-            {
-                HandleMouse(hit.collider.gameObject.name, 1);
-            }
+            HandleMouse(hit.collider.gameObject.name, state);
         }
         else
         {
-            HandleMouse(null, 0);
+            HandleMouse(null, state);
         }
         
 
@@ -58,15 +58,15 @@ public class CollisionManager : MonoBehaviour
     public void RegisterCollision(string objectName)
     {
         Collisions.Add(objectName);
-        // 通知 EventManager
-        // Debug.Log($"物体{objectName}被点击了!");
-        EventManager.Instance.TriggerEvent("Click", objectName);
     }
 
     public void UnregisterCollision(string objectName)
     {
         // 假设 Collision2DInfo 实现了相等性检查
         Collisions.Remove(objectName);
+        // 通知 EventManager
+        // Debug.Log($"物体{objectName}被点击了!");
+        EventManager.Instance.TriggerEvent("Click", objectName);
     }
     
     public void HandleMouse(string objectName, int state)

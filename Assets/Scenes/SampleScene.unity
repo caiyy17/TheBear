@@ -361,9 +361,9 @@ GameObject:
   m_Component:
   - component: {fileID: 78207085}
   - component: {fileID: 78207084}
-  - component: {fileID: 78207088}
   - component: {fileID: 78207087}
   - component: {fileID: 78207086}
+  - component: {fileID: 78207088}
   m_Layer: 0
   m_Name: "10-\u62D6\u62FDlv3\uFF08\u843D\u4E0B\uFF09-1"
   m_TagString: Untagged
@@ -432,7 +432,7 @@ Transform:
   m_GameObject: {fileID: 78207083}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -20, z: 0}
+  m_LocalPosition: {x: 0, y: -20, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -513,10 +513,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 78207083}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb2f8bd3065c419ab5c84c453defafb, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a032a92d4184a23a8c58fdd4915e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: 
+  dragDir: {x: -1, y: 0}
+  dragDistance: 0.2
+  triggerFrame: 12
+  totalFrames: 16
+  aniName: "10-\u62D6\u62FDlv3\uFF08\u843D\u4E0B\uFF09"
+  aniNameR: "10-\u62D6\u62FDlv3\uFF08\u843D\u4E0B\uFF09R"
 --- !u!1 &79725003
 GameObject:
   m_ObjectHideFlags: 0
