@@ -5,10 +5,13 @@ using System.Linq;
 using DG.Tweening;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using UnityEngine.Serialization;
 
 public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
+    public string startEventName = "StartGame";
+    public string[] eventTreeList = { "EventsTree1" };
     
     private Dictionary<string, Event> events = new Dictionary<string, Event>();
     private List<Event> currentEvents = new List<Event>();
@@ -36,16 +39,21 @@ public class EventManager : MonoBehaviour
     {
         DOTween.Init();
         customCursor = GetComponent<CustomCursor>();
-        string json = Resources.Load<TextAsset>("EventsTree").text;
-        EventsTree eventsTree = JsonConvert.DeserializeObject<EventsTree>(json);
-        for (int i = 0; i < eventsTree.events.Count; i++)
+        // 加载所有事件
+        for (int j = 0; j < eventTreeList.Length; j++)
         {
-            Event e = eventsTree.events[i];
-            string eventName = e.eventName;
-            events.Add(eventName, e);
+            string json = Resources.Load<TextAsset>(eventTreeList[j]).text;
+            EventsTree eventsTree = JsonConvert.DeserializeObject<EventsTree>(json);
+            for (int i = 0; i < eventsTree.events.Count; i++)
+            {
+                Event e = eventsTree.events[i];
+                string eventName = e.eventName;
+                events.Add(eventName, e);
+            }
         }
+        
         Debug.Log($"EventManager: {events.Count} events loaded.");
-        AddEvent("StartGame");
+        AddEvent(startEventName);
     }
     
     void Update()
@@ -169,13 +177,16 @@ public class EventManager : MonoBehaviour
             case "Move":
             {
                 string objectName = actionParams["objectName"] as string;
+                object startPosition = actionParams["startpoint"];
+                float[] startArray = ((JArray)startPosition).Select(jv => (float)jv).ToArray();
                 object endPosition = actionParams["endpoint"];
-                float[] array = ((JArray)endPosition).Select(jv => (float)jv).ToArray();
+                float[] endArray = ((JArray)endPosition).Select(jv => (float)jv).ToArray();
                 float duration = objectToFloat(actionParams["duration"]);
                 GameObject gameObject = GameObject.Find(objectName);
                 if (gameObject)
                 {
-                    gameObject.transform.DOMove(new Vector3(array[0], array[1], array[2]), duration);
+                    gameObject.transform.position = new Vector3(startArray[0], startArray[1], startArray[2]);
+                    gameObject.transform.DOMove(new Vector3(endArray[0], endArray[1], endArray[2]), duration);
                 }
                 break;
             }
@@ -192,25 +203,24 @@ public class EventManager : MonoBehaviour
             case "ShowObject":
             {
                 string objectName = actionParams["objectName"] as string;
-                object endPosition = actionParams["endpoint"];
-                float[] array = ((JArray)endPosition).Select(jv => (float)jv).ToArray();
                 object startPosition = actionParams["startpoint"];
-                float[] array2 = ((JArray)startPosition).Select(jv => (float)jv).ToArray();
+                float[] startArray = ((JArray)startPosition).Select(jv => (float)jv).ToArray();
+                object endPosition = actionParams["endpoint"];
+                float[] endArray = ((JArray)endPosition).Select(jv => (float)jv).ToArray();
                 float duration = objectToFloat(actionParams["duration"]);
                 GameObject gameObject = GameObject.Find(objectName);
                 if (gameObject)
                 {
                     //slowly move from startpoint to endpoint
                     //set alpha from 0 to 1
-                    gameObject.SetActive(true);
                     if(duration > 0 && gameObject.GetComponent(typeof(SpriteRenderer)))
                     {
                         SpriteRenderer spriteRenderer = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
                         spriteRenderer.color = new Color(1, 1, 1, 0);
                         spriteRenderer.DOFade(1, duration);
                     }
-                    gameObject.transform.position = new Vector3(array2[0], array2[1], array2[2]);
-                    gameObject.transform.DOMove(new Vector3(array[0], array[1], array[2]), duration);
+                    gameObject.transform.position = new Vector3(startArray[0], startArray[1], startArray[2]);
+                    gameObject.transform.DOMove(new Vector3(endArray[0], endArray[1], endArray[2]), duration);
                 }
                 break;
             }
