@@ -42,13 +42,16 @@ public class EventManager : MonoBehaviour
         // 加载所有事件
         for (int j = 0; j < eventTreeList.Length; j++)
         {
-            string json = Resources.Load<TextAsset>(eventTreeList[j]).text;
-            EventsTree eventsTree = JsonConvert.DeserializeObject<EventsTree>(json);
-            for (int i = 0; i < eventsTree.events.Count; i++)
+            TextAsset json = Resources.Load<TextAsset>(eventTreeList[j]);
+            if (json != null)
             {
-                Event e = eventsTree.events[i];
-                string eventName = e.eventName;
-                events.Add(eventName, e);
+                EventsTree eventsTree = JsonConvert.DeserializeObject<EventsTree>(json.text);
+                for (int i = 0; i < eventsTree.events.Count; i++)
+                {
+                    Event e = eventsTree.events[i];
+                    string eventName = e.eventName;
+                    events.Add(eventName, e);
+                }
             }
         }
         
