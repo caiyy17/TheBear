@@ -58,13 +58,13 @@
                         "objectName": "场景A",
                         "startpoint": [
                             0,
-                            -12,
-                            -0.9
+                            -9,
+                            0
                         ],
                         "endpoint": [
                             0,
-                            -12,
-                            -0.9
+                            -9,
+                            0
                         ],
                         "duration": 1
                     }
