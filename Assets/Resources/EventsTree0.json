@@ -4,13 +4,13 @@
             "eventName": "StartGame",
             "triggerType": "Click",
             "triggerParams": {
-                "objectName": "1-长条背景"
+                "objectName": "go_默认"
             },
             "preactions": [
                 {
                     "actionType": "AddHover",
                     "actionParams": {
-                        "objectName": "1-长条背景"
+                        "objectName": "go_默认"
                     }
                 }
             ],
@@ -18,7 +18,27 @@
                 {
                     "actionType": "RemoveHover",
                     "actionParams": {
-                        "objectName": "1-长条背景"
+                        "objectName": "go_默认"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "tittle",
+                        "animationName": "开始界面结束",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "go_默认"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "back_默认"
                     }
                 },
                 {
@@ -42,6 +62,12 @@
                     "actionType": "Wait",
                     "actionParams": {
                         "duration": 4
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "title"
                     }
                 },
                 {
@@ -231,7 +257,7 @@
                 {
                     "actionType": "Wait",
                     "actionParams": {
-                        "duration": 1
+                        "duration": 2
                     }
                 },
                 {
@@ -262,7 +288,7 @@
                 {
                     "actionType": "Wait",
                     "actionParams": {
-                        "duration": 1
+                        "duration": 2
                     }
                 },
                 {

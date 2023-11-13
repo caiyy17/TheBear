@@ -4,8 +4,9 @@ using UnityEngine.Serialization;
 
 public class CustomCursor : MonoBehaviour
 {
-    [FormerlySerializedAs("cursorTexture")] public Texture2D hoverTexture; // Drag your custom cursor texture here in the inspector
-    [FormerlySerializedAs("hoverTexture")] public Texture2D selectTexture; // Drag your custom cursor texture here in the inspector
+    public Texture2D hoverTexture; // Drag your custom cursor texture here in the inspector
+    public Texture2D selectTexture; // Drag your custom cursor texture here in the inspector
+    public Texture2D defaultTexture;
     public Vector2 hotSpot = Vector2.zero; // The "active spot" of the cursor, usually the point or tip of the cursor arrow.
     public float cursorScale = 1.0f; // The scale of the cursor, in case you want to use a smaller or larger cursor graphic than the original.
     public CursorMode cursorMode = CursorMode.Auto; // Use auto to let Unity handle the cursor size based on the platform, or ForceSoftware if you want to force the cursor size.
@@ -18,7 +19,8 @@ public class CustomCursor : MonoBehaviour
         // Set the custom cursor
         hoverTexture = Resize(hoverTexture, cursorScale);
         selectTexture = Resize(selectTexture, cursorScale);
-        Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
+        defaultTexture = Resize(defaultTexture, cursorScale);
+        Cursor.SetCursor(defaultTexture, hotSpot, cursorMode);
     }
     
     void Update()
@@ -88,7 +90,7 @@ public class CustomCursor : MonoBehaviour
             }
             else
             {
-                Cursor.SetCursor(null, Vector2.zero, cursorMode);
+                Cursor.SetCursor(defaultTexture, hotSpot, cursorMode);
             }
         }
     }

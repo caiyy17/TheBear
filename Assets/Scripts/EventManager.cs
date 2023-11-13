@@ -222,8 +222,8 @@ public class EventManager : MonoBehaviour
                         spriteRenderer.color = new Color(1, 1, 1, 0);
                         spriteRenderer.DOFade(1, duration);
                     }
-                    gameObject.transform.position = new Vector3(startArray[0], startArray[1], startArray[2]);
-                    gameObject.transform.DOMove(new Vector3(endArray[0], endArray[1], endArray[2]), duration);
+                    gameObject.transform.localPosition = new Vector3(startArray[0], startArray[1], startArray[2]);
+                    gameObject.transform.DOLocalMove(new Vector3(endArray[0], endArray[1], endArray[2]), duration);
                 }
                 break;
             }
