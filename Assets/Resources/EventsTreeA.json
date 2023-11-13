@@ -392,9 +392,141 @@
                     }
                 },
                 {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "水珠0014",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "水珠0000"
+                    }
+                },
+                {
                     "actionType": "RegisterEvent",
                     "actionParams": {
                         "eventName": "WaterDrop2"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "WaterDrop2",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "水珠0014"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "水珠0014"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "水珠0014"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "水珠0014",
+                        "animationName": "水珠",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "水珠0067",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "水珠0014"
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "WaterDrop3"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "WaterDrop3",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "水珠0067"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "水珠0067"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "水珠0067"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "水珠0067",
+                        "animationName": "水珠",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "WaterDrop4"
                     }
                 }
             ]
