@@ -188,8 +188,22 @@ public class EventManager : MonoBehaviour
                 GameObject gameObject = GameObject.Find(objectName);
                 if (gameObject)
                 {
-                    gameObject.transform.position = new Vector3(startArray[0], startArray[1], startArray[2]);
-                    gameObject.transform.DOMove(new Vector3(endArray[0], endArray[1], endArray[2]), duration);
+                    gameObject.transform.localPosition = new Vector3(startArray[0], startArray[1], startArray[2]);
+                    gameObject.transform.DOLocalMove(new Vector3(endArray[0], endArray[1], endArray[2]), duration);
+                }
+                break;
+            }
+            case "Scale":
+            {
+                string objectName = actionParams["objectName"] as string;
+                float startScale = objectToFloat(actionParams["startscale"]);
+                float endScale = objectToFloat(actionParams["endscale"]);
+                float duration = objectToFloat(actionParams["duration"]);
+                GameObject gameObject = GameObject.Find(objectName);
+                if (gameObject)
+                {
+                    gameObject.transform.localScale = new Vector3(startScale, startScale, startScale);
+                    gameObject.transform.DOScale(endScale, duration);
                 }
                 break;
             }

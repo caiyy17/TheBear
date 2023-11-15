@@ -72,7 +72,93 @@
                 {
                     "actionType": "Wait",
                     "actionParams": {
-                        "duration": 3
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "小熊走路"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "小熊走路",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "小熊走路（草稿）-1"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "小熊走路（草稿）-1"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "小熊走路（草稿）-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊走路（草稿）-1",
+                        "animationName": "小熊走路",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "小熊走路（草稿）-1",
+                        "startpoint": [
+                            -15.69,
+                            12.52,
+                            -0.8
+                        ],
+                        "endpoint": [
+                            -9.5,
+                            12.52,
+                            -0.8
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "场景A",
+                        "startpoint": [
+                            0,
+                            -9,
+                            0
+                        ],
+                        "endpoint": [
+                            0,
+                            -11.67,
+                            0
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Scale",
+                    "actionParams": {
+                        "objectName": "场景A",
+                        "startscale": 0.5,
+                        "endscale": 0.74,
+                        "duration": 2
                     }
                 },
                 {
@@ -334,6 +420,32 @@
                     }
                 },
                 {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "场景A",
+                        "startpoint": [
+                            0,
+                            -11.67,
+                            0
+                        ],
+                        "endpoint": [
+                            0,
+                            -9,
+                            0
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Scale",
+                    "actionParams": {
+                        "objectName": "场景A",
+                        "startscale": 0.74,
+                        "endscale": 0.5,
+                        "duration": 2
+                    }
+                },
+                {
                     "actionType": "RegisterEvent",
                     "actionParams": {
                         "eventName": "WaterDrop1"
@@ -515,6 +627,73 @@
                         "objectName": "水珠0067",
                         "animationName": "水珠",
                         "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 0.5
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "虫爬走0000",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.5
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "虫爬走0000",
+                        "animationName": "虫爬走",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "虫1-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "虫2-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "虫3-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "虫4-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "虫5-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "虫6789-1"
                     }
                 },
                 {
