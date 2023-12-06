@@ -96,6 +96,23 @@
                     }
                 },
                 {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "1",
+                        "startpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
                     "actionType": "RegisterEvent",
                     "actionParams": {
                         "eventName": "DiscoverTheBear1"
@@ -221,6 +238,29 @@
                             -0.5
                         ],
                         "duration": 0
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "1"
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "1 (1)",
+                        "startpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "duration": 1
                     }
                 },
                 {
@@ -360,6 +400,29 @@
                     }
                 },
                 {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "1 (1)"
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "1 (2)",
+                        "startpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
                     "actionType": "RegisterEvent",
                     "actionParams": {
                         "eventName": "BearInteractionFruit1"
@@ -435,6 +498,12 @@
                     "actionType": "RemoveHover",
                     "actionParams": {
                         "objectName": "4-果子2（落下打zzz）-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "1 (2)"
                     }
                 },
                 {
