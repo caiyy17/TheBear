@@ -38,7 +38,6 @@ public class CollisionManager : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
         if(hit.collider != null)
         {
-            // Debug.Log(hit.collider.gameObject.name);
             HandleMouse(hit.collider.gameObject.name, state);
         }
         else

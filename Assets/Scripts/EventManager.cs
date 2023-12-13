@@ -158,6 +158,7 @@ public class EventManager : MonoBehaviour
             case "AddHover":
             {
                 string objectName = actionParams["objectName"] as string;
+                Debug.Log($"AddHover {objectName}");
                 customCursor.RegisterHover(objectName);
                 break;
             }

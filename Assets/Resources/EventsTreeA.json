@@ -70,6 +70,18 @@
                     }
                 },
                 {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "兔兔-1"
+                    }
+                },
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "呱呱-1"
+                    }
+                },
+                {
                     "actionType": "Wait",
                     "actionParams": {
                         "duration": 1
@@ -763,6 +775,31 @@
                     }
                 },
                 {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "小熊滑下000",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.8
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.8
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊滑下000",
+                        "animationName": "小熊滑落1",
+                        "duration": 10
+                    }
+                },
+                {
                     "actionType": "PlayAnimation",
                     "actionParams": {
                         "objectName": "小熊走路（草稿）-1",
@@ -977,6 +1014,35 @@
                     "actionType": "RegisterEvent",
                     "actionParams": {
                         "eventName": "BearDrop4"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "BearDrop4",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "小熊走路（草稿）-1"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "兔兔-1"
+                    }
+                },
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "呱呱-1"
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "BearDrop5"
                     }
                 }
             ]

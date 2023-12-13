@@ -5,7 +5,9 @@ using UnityEngine.Serialization;
 public class CustomCursor : MonoBehaviour
 {
     public Texture2D hoverTexture; // Drag your custom cursor texture here in the inspector
+    public Texture2D dragTexture;
     public Texture2D selectTexture; // Drag your custom cursor texture here in the inspector
+    public Texture2D dragSelectTexture;
     public Texture2D defaultTexture;
     public Vector2 hotSpot = Vector2.zero; // The "active spot" of the cursor, usually the point or tip of the cursor arrow.
     public float cursorScale = 1.0f; // The scale of the cursor, in case you want to use a smaller or larger cursor graphic than the original.
@@ -13,12 +15,16 @@ public class CustomCursor : MonoBehaviour
 
     private List<string> hoverObjects = new List<string>();
     private bool isSelected = false;
+    private Texture2D currentTexture;
+    private Texture2D currentSelectTexture;
 
     void Start()
     {
         // Set the custom cursor
         hoverTexture = Resize(hoverTexture, cursorScale);
         selectTexture = Resize(selectTexture, cursorScale);
+        dragTexture = Resize(dragTexture, cursorScale);
+        dragSelectTexture = Resize(dragSelectTexture, cursorScale);
         defaultTexture = Resize(defaultTexture, cursorScale);
         Cursor.SetCursor(defaultTexture, hotSpot, cursorMode);
     }
@@ -56,13 +62,14 @@ public class CustomCursor : MonoBehaviour
 
     public void HandleMouse(string obj, int state)
     {
+        
         //鼠标按下状态
         if (state == 1)
         {
             //已被选中就继续选中
             if (isSelected)
             {
-                Cursor.SetCursor(selectTexture, hotSpot, cursorMode);
+                Cursor.SetCursor(currentSelectTexture, hotSpot, cursorMode);
             }
             else
             {
@@ -71,7 +78,19 @@ public class CustomCursor : MonoBehaviour
                 {
                     isSelected = true;
                     // Debug.Log("选中");
-                    Cursor.SetCursor(selectTexture, hotSpot, cursorMode);
+                    
+                    //找到名称为obj的物体
+                    GameObject currentObject = GameObject.Find(obj);
+                    //如果这个obj存在DragObject组件
+                    if (currentObject.GetComponent<DragObject>() != null)
+                    {
+                        currentSelectTexture = dragSelectTexture;
+                    }
+                    else
+                    {
+                        currentSelectTexture = selectTexture;
+                    }
+                    Cursor.SetCursor(currentSelectTexture, hotSpot, cursorMode);
                 }
                 //否则不操作
             }
@@ -86,7 +105,16 @@ public class CustomCursor : MonoBehaviour
             //若在hoverObjects中则显示hoverTexture
             if (hoverObjects.Contains(obj))
             {
-                Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
+                GameObject currentObject = GameObject.Find(obj);
+                if (currentObject.GetComponent<DragObject>() != null)
+                {
+                    Cursor.SetCursor(dragTexture, hotSpot, cursorMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
+                }
+                
             }
             else
             {

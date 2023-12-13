@@ -12,6 +12,12 @@
                     "actionParams": {
                         "objectName": "go_默认"
                     }
+                },
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "back_默认"
+                    }
                 }
             ],
             "actions": [
@@ -19,6 +25,12 @@
                     "actionType": "RemoveHover",
                     "actionParams": {
                         "objectName": "go_默认"
+                    }
+                },
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "back_默认"
                     }
                 },
                 {
@@ -874,6 +886,23 @@
                 {
                     "actionType": "ShowObject",
                     "actionParams": {
+                        "objectName": "1 (3)",
+                        "startpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
                         "objectName": "拖拽提示-1",
                         "startpoint": [
                             -2.5,
@@ -932,6 +961,12 @@
                     "actionType": "RemoveHover",
                     "actionParams": {
                         "objectName": "10-拖拽lv3（落下）-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "1 (3)"
                     }
                 },
                 {
