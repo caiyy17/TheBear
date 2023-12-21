@@ -775,31 +775,6 @@
                     }
                 },
                 {
-                    "actionType": "ShowObject",
-                    "actionParams": {
-                        "objectName": "小熊滑下000",
-                        "startpoint": [
-                            0,
-                            0,
-                            -0.8
-                        ],
-                        "endpoint": [
-                            0,
-                            0,
-                            -0.8
-                        ],
-                        "duration": 0
-                    }
-                },
-                {
-                    "actionType": "PlayAnimation",
-                    "actionParams": {
-                        "objectName": "小熊滑下000",
-                        "animationName": "小熊滑落1",
-                        "duration": 10
-                    }
-                },
-                {
                     "actionType": "PlayAnimation",
                     "actionParams": {
                         "objectName": "小熊走路（草稿）-1",
@@ -817,8 +792,8 @@
                             -0.8
                         ],
                         "endpoint": [
-                            2,
-                            -5.87,
+                            0.85,
+                            -6,
                             -0.8
                         ],
                         "duration": 2
@@ -898,13 +873,13 @@
                     "actionParams": {
                         "objectName": "小熊走路（草稿）-1",
                         "startpoint": [
-                            2,
-                            -5.87,
+                            0.85,
+                            -6,
                             -0.8
                         ],
                         "endpoint": [
-                            -5.7,
-                            -11.55,
+                            1.2,
+                            -10,
                             -0.8
                         ],
                         "duration": 2
@@ -923,6 +898,37 @@
                             2.58,
                             8.43,
                             0
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊走路（草稿）-1",
+                        "animationName": "小熊走路R",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "小熊走路（草稿）-1",
+                        "startpoint": [
+                            1.2,
+                            -10,
+                            -0.8
+                        ],
+                        "endpoint": [
+                            -5.3,
+                            -10.5,
+                            -0.8
                         ],
                         "duration": 2
                     }
@@ -966,6 +972,37 @@
                     "actionType": "PlayAnimation",
                     "actionParams": {
                         "objectName": "小熊走路（草稿）-1",
+                        "animationName": "小熊走路",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "小熊走路（草稿）-1",
+                        "startpoint": [
+                            -5.3,
+                            -10.5,
+                            -0.8
+                        ],
+                        "endpoint": [
+                            1.2,
+                            -10,
+                            -0.8
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊走路（草稿）-1",
                         "animationName": "小熊滑落",
                         "duration": 2
                     }
@@ -975,12 +1012,12 @@
                     "actionParams": {
                         "objectName": "小熊走路（草稿）-1",
                         "startpoint": [
-                            -5.7,
-                            -11.55,
+                            1.2,
+                            -10,
                             -0.8
                         ],
                         "endpoint": [
-                            0.5,
+                            1.15,
                             -24.3,
                             -0.8
                         ],
@@ -1013,20 +1050,102 @@
                 {
                     "actionType": "RegisterEvent",
                     "actionParams": {
-                        "eventName": "BearDrop4"
+                        "eventName": "end1"
                     }
                 }
             ]
         },
         {
-            "eventName": "BearDrop4",
+            "eventName": "end1",
             "triggerType": "Click",
             "triggerParams": {
-                "objectName": "小熊走路（草稿）-1"
+                "objectName": "鼠1-1"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "鼠1-1"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鼠1-1",
+                        "animationName": "鼠1",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "end2"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "end2",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "鼠1-1"
             },
             "preactions": [
             ],
             "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鼠1-1",
+                        "animationName": "鼠2",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "end3"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "end3",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "鼠1-1"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鼠1-1",
+                        "animationName": "鼠3",
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 2
+                    }
+                },
                 {
                     "actionType": "RemoveHover",
                     "actionParams": {
@@ -1042,7 +1161,102 @@
                 {
                     "actionType": "RegisterEvent",
                     "actionParams": {
-                        "eventName": "BearDrop5"
+                        "eventName": "endA"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "endA",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "鼠1-1"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "鼠1-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "Start"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "场景A"
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "A-B",
+                        "startpoint": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "A-B"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "A-B",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "鼹鼠默认-1"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "鼹鼠默认-1"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "鼹鼠默认-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鼹鼠默认-1",
+                        "animationName": "鼹鼠1",
+                        "duration": 5
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 5
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "StageB"
                     }
                 }
             ]
