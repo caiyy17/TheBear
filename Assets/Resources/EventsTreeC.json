@@ -606,6 +606,12 @@
             ],
             "actions": [
                 {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "bear2"
+                    }
+                },
+                {
                     "actionType": "PlayAnimation",
                     "actionParams": {
                         "objectName": "小熊指挥1-1",
