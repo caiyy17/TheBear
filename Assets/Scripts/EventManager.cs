@@ -212,9 +212,24 @@ public class EventManager : MonoBehaviour
             {
                 string objectName = actionParams["objectName"] as string;
                 GameObject gameObject = GameObject.Find(objectName);
-                if (gameObject)
+                if(actionParams.ContainsKey("duration"))
                 {
-                    gameObject.SetActive(false);
+                    float duration = objectToFloat(actionParams["duration"]);
+                    if (gameObject)
+                    {
+                        if (duration > 0 && gameObject.GetComponent(typeof(SpriteRenderer)))
+                        {
+                            SpriteRenderer spriteRenderer = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
+                            spriteRenderer.DOFade(0, duration);
+                        }
+                    }
+                }
+                else
+                {
+                    if (gameObject)
+                    {
+                        gameObject.SetActive(false);
+                    }
                 }
                 break;
             }

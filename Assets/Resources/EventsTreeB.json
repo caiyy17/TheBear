@@ -1,0 +1,592 @@
+{
+    "events": [
+      {
+        "eventName": "StageB",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "爬爬鼠259"
+        },
+        "preactions": [
+          {
+            "actionType": "AddHover",
+            "actionParams": {
+              "objectName": "爬爬鼠259"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "actionType": "RemoveHover",
+            "actionParams": {
+              "objectName": "爬爬鼠259"
+            }
+          },
+          {
+            "actionType": "ShowObject",
+            "actionParams": {
+              "objectName": "地图B",
+              "startpoint": [
+                0,
+                0,
+                -3
+              ],
+              "endpoint": [
+                0,
+                0,
+                -3
+              ],
+              "duration": 0
+            }
+          },
+          {
+            "actionType": "ShowObject",
+            "actionParams": {
+              "objectName": "B背景",
+              "startpoint": [
+                5.2,
+                14.7,
+                0
+              ],
+              "endpoint": [
+                5.2,
+                14.7,
+                0
+              ],
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "HideObject",
+            "actionParams": {
+              "objectName": "Start"
+            }
+          },
+          {
+            "actionType": "HideObject",
+            "actionParams": {
+              "objectName": "StageA"
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+              "eventName": "move"
+            }
+          }
+        ]
+      },
+      {
+        "eventName": "move",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "小熊走路B"
+        },
+        "preactions": [
+          {
+            "actionType": "AddHover",
+            "actionParams": {
+            "objectName": "小熊走路B"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "actionType": "RemoveHover",
+            "actionParams": {
+            "objectName": "小熊走路B"
+            }
+          },
+          {
+            "actionType": "PlayAnimation",
+            "actionParams": {
+              "objectName": "小熊走路B",
+              "animationName": "小熊走路",
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "Move",
+            "actionParams": {
+              "objectName": "小熊走路B",
+              "startpoint": [
+                -10.7,
+                -17.19,
+                -0.4
+              ],
+              "endpoint": [
+                -1.4,
+                -17.19,
+                -0.4
+              ],
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "Move",
+            "actionParams": {
+              "objectName": "B背景",
+              "startpoint": [
+                5.2,
+                14.7,
+                0
+              ],
+              "endpoint": [
+                2.35,
+                35.27,
+                0
+              ],
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "Scale",
+            "actionParams": {
+              "objectName": "B背景",
+              "startscale": 1,
+              "endscale": 2,
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+              "eventName": "blow"
+            }
+          }
+        ]
+      },
+      {
+        "eventName": "blow",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "气球默认"
+        },
+        "preactions": [
+          {
+            "actionType": "AddHover",
+            "actionParams": {
+            "objectName": "气球默认"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "actionType": "RemoveHover",
+            "actionParams": {
+            "objectName": "气球默认"
+            }
+          },
+          {
+            "actionType": "HideObject",
+            "actionParams": {
+              "objectName": "小熊走路B"
+            }
+          },
+          {
+            "actionType": "HideObject",
+            "actionParams": {
+              "objectName": "气球默认"
+            }
+          },
+          {
+            "actionType": "ShowObject",
+            "actionParams": {
+              "objectName": "熊吹气球01",
+              "startpoint": [
+                0,
+                0,
+                -0.4
+              ],
+              "endpoint": [
+                0,
+                0,
+                -0.4
+              ],
+              "duration": 0
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+              "eventName": "blow2"
+            }
+          }
+        ]
+      },
+      {
+        "eventName": "blow2",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "熊吹气球01"
+        },
+        "preactions": [
+          {
+            "actionType": "AddHover",
+            "actionParams": {
+            "objectName": "熊吹气球01"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "actionType": "PlayAnimation",
+            "actionParams": {
+              "objectName": "熊吹气球01",
+              "animationName": "熊吹气球01",
+              "duration": 1.5
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 1.5
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+              "eventName": "blow3"
+            }
+          }
+        ]
+      },
+      {
+        "eventName": "blow3",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "熊吹气球01"
+        },
+        "preactions": [
+        ],
+        "actions": [
+          {
+            "actionType": "PlayAnimation",
+            "actionParams": {
+              "objectName": "熊吹气球01",
+              "animationName": "熊吹气球02",
+              "duration": 1.5
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 1.5
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+              "eventName": "blow4"
+            }
+          }
+        ]
+      },
+      {
+        "eventName": "blow4",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "熊吹气球01"
+        },
+        "preactions": [
+        ],
+        "actions": [
+          {
+            "actionType": "PlayAnimation",
+            "actionParams": {
+              "objectName": "熊吹气球01",
+              "animationName": "熊吹气球03",
+              "duration": 1.5
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 1.5
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+              "eventName": "blow5"
+            }
+          }
+        ]
+      },
+      {
+        "eventName": "blow5",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "熊吹气球01"
+        },
+        "preactions": [
+        ],
+        "actions": [
+          {
+            "actionType": "PlayAnimation",
+            "actionParams": {
+              "objectName": "熊吹气球01",
+              "animationName": "熊吹气球04",
+              "duration": 1.5
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 1.5
+            }
+          },
+          {
+            "actionType": "Move",
+            "actionParams": {
+              "objectName": "B背景",
+              "startpoint": [
+                -1.9,
+                35.27,
+                0
+              ],
+              "endpoint": [
+                -1.9,
+                14.7,
+                0
+              ],
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "Scale",
+            "actionParams": {
+              "objectName": "B背景",
+              "startscale": 2,
+              "endscale": 1,
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+              "eventName": "blow6"
+            }
+          }
+        ]
+      },
+      {
+        "eventName": "blow6",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "熊吹气球01"
+        },
+        "preactions": [
+        ],
+        "actions": [
+          {
+            "actionType": "RemoveHover",
+            "actionParams": {
+              "objectName": "熊吹气球01"
+            }
+          },
+          {
+            "actionType": "HideObject",
+            "actionParams": {
+              "objectName": "熊吹气球01"
+            }
+          },
+          {
+            "actionType": "ShowObject",
+            "actionParams": {
+              "objectName": "气球熊",
+              "startpoint": [
+                0,
+                0,
+                -0.4
+              ],
+              "endpoint": [
+                0,
+                0,
+                -0.4
+              ],
+              "duration": 0
+            }
+          },
+          {
+            "actionType": "Move",
+            "actionParams": {
+              "objectName": "B背景",
+              "startpoint": [
+                -1.9,
+                14.7,
+                0
+              ],
+              "endpoint": [
+                -1.9,
+                -12.14,
+                0
+              ],
+              "duration": 10
+            }
+          },
+          {
+            "actionType": "Move",
+            "actionParams": {
+              "objectName": "气球熊",
+              "startpoint": [
+                0,
+                0,
+                -0.4
+              ],
+              "endpoint": [
+                0,
+                26.84,
+                -0.4
+              ],
+              "duration": 10
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 10
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+            "eventName": "blow7"
+            }
+          }
+        ]
+      },
+      {
+        "eventName": "blow7",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "气球熊"
+        },
+        "preactions": [
+          {
+            "actionType": "AddHover",
+            "actionParams": {
+            "objectName": "气球熊"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "actionType": "RemoveHover",
+            "actionParams": {
+            "objectName": "气球熊"
+            }
+          },
+          {
+            "actionType": "HideObject",
+            "actionParams": {
+              "objectName": "有鸟电线"
+            }
+          },
+          {
+            "actionType": "Move",
+            "actionParams": {
+              "objectName": "气球熊",
+              "startpoint": [
+                0,
+                0,
+                -0.4
+              ],
+              "endpoint": [
+                0,
+                0,
+                -0.4
+              ],
+              "duration": 0
+            }
+          },
+          {
+            "actionType": "PlayAnimation",
+            "actionParams": {
+              "objectName": "气球熊",
+              "animationName": "电线",
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+            "eventName": "blow8"
+            }
+          }
+        ]
+      },
+      {
+        "eventName": "blow8",
+        "triggerType": "Click",
+        "triggerParams": {
+          "objectName": "猫"
+        },
+        "preactions": [
+          {
+            "actionType": "AddHover",
+            "actionParams": {
+            "objectName": "猫"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "actionType": "RemoveHover",
+            "actionParams": {
+            "objectName": "猫"
+            }
+          },
+          {
+            "actionType": "HideObject",
+            "actionParams": {
+              "objectName": "猫默认"
+            }
+          },
+          {
+            "actionType": "PlayAnimation",
+            "actionParams": {
+              "objectName": "气球熊",
+              "animationName": "猫叼小熊",
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "Wait",
+            "actionParams": {
+              "duration": 2
+            }
+          },
+          {
+            "actionType": "RegisterEvent",
+            "actionParams": {
+            "eventName": "StageC"
+            }
+          }
+        ]
+      }
+    ]
+}

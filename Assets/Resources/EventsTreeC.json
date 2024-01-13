@@ -1,0 +1,713 @@
+{
+    "events": [
+        {
+            "eventName": "StageC",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "猫"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "猫"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "猫"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "Start"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "StageA"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "StageB"
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "地图C",
+                        "startpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "场景A",
+                        "startpoint": [
+                            0,
+                            -9,
+                            0
+                        ],
+                        "endpoint": [
+                            0,
+                            -9,
+                            0
+                        ],
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "C背景",
+                        "startpoint": [
+                            7.92,
+                            -0.27,
+                            0
+                        ],
+                        "endpoint": [
+                            7.92,
+                            -0.27,
+                            0
+                        ],
+                        "duration": 2
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "stageC1"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "stageC1",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "小熊走过来-1"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "小熊走过来-1"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "小熊走过来-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊走过来-1",
+                        "animationName": "小熊C",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鱼游过来-1",
+                        "animationName": "鱼",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "鱼泡泡1"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "鱼泡泡1",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "鱼游过来-1"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "鱼游过来-1"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "吐泡泡-1",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.2
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.2
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "吐泡泡-1",
+                        "animationName": "泡泡",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "鱼泡泡2"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "鱼泡泡2",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "鱼游过来-1"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "吐泡泡-1",
+                        "animationName": "泡泡2",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "鱼泡泡3"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "鱼泡泡3",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "鱼游过来-1"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "鱼游过来-1"
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "吐泡泡-1",
+                        "animationName": "泡泡3",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "鱼泡泡4"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "鱼泡泡4",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "bear1"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "bear1"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "RemoveHover",
+                    "actionParams": {
+                        "objectName": "bear1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "吐泡泡-1"
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "小熊走过来-1"
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "小熊乘坐泡泡-1",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.4
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.4
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊乘坐泡泡-1",
+                        "animationName": "坐泡泡",
+                        "duration": 5
+                    }
+                },
+                {
+                    "actionType": "Move",
+                    "actionParams": {
+                        "objectName": "C背景",
+                        "startpoint": [
+                            7.92,
+                            -0.27,
+                            0
+                        ],
+                        "endpoint": [
+                            -7.75,
+                            -0.27,
+                            0
+                        ],
+                        "duration": 4
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 7
+                    }
+                },
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "右边笼子",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "指挥1"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "指挥1",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "bear2"
+            },
+            "preactions": [
+                {
+                    "actionType": "AddHover",
+                    "actionParams": {
+                        "objectName": "bear2"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "actionType": "HideObject",
+                    "actionParams": {
+                        "objectName": "小熊乘坐泡泡-1"
+                    }
+                },
+                {
+                    "actionType": "ShowObject",
+                    "actionParams": {
+                        "objectName": "小熊指挥1-1",
+                        "startpoint": [
+                            0,
+                            0,
+                            -0.4
+                        ],
+                        "endpoint": [
+                            0,
+                            0,
+                            -0.4
+                        ],
+                        "duration": 0
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊指挥1-1",
+                        "animationName": "指挥1",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鸟A默认",
+                        "animationName": "A",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "音符A-1",
+                        "animationName": "NoteA",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "指挥2"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "指挥2",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "bear2"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊指挥1-1",
+                        "animationName": "指挥1",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鸟B默认",
+                        "animationName": "B",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "音符B-1",
+                        "animationName": "NoteB",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "指挥3"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "指挥3",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "bear2"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊指挥1-1",
+                        "animationName": "指挥1",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鸟C默认",
+                        "animationName": "C",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "音符C-1",
+                        "animationName": "NoteC",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "指挥4"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "指挥4",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "bear2"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊指挥1-1",
+                        "animationName": "指挥1",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鸟D默认",
+                        "animationName": "D",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "音符D-1",
+                        "animationName": "NoteD",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "指挥5"
+                    }
+                }
+            ]
+        },
+        {
+            "eventName": "指挥5",
+            "triggerType": "Click",
+            "triggerParams": {
+                "objectName": "bear2"
+            },
+            "preactions": [
+            ],
+            "actions": [
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "小熊指挥1-1",
+                        "animationName": "指挥2",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鸟A默认",
+                        "animationName": "A",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "音符A-1",
+                        "animationName": "NoteA",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鸟B默认",
+                        "animationName": "B",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "音符B-1",
+                        "animationName": "NoteB",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鸟C默认",
+                        "animationName": "C",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "音符C-1",
+                        "animationName": "NoteC",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "鸟D默认",
+                        "animationName": "D",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "PlayAnimation",
+                    "actionParams": {
+                        "objectName": "音符D-1",
+                        "animationName": "NoteD",
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "Wait",
+                    "actionParams": {
+                        "duration": 1
+                    }
+                },
+                {
+                    "actionType": "RegisterEvent",
+                    "actionParams": {
+                        "eventName": "StageD"
+                    }
+                }
+            ]
+        }
+    ]
+}
