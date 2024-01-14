@@ -636,12 +636,6 @@
                     }
                 },
                 {
-                    "actionType": "Wait",
-                    "actionParams": {
-                        "duration": 1
-                    }
-                },
-                {
                     "actionType": "PlayAnimation",
                     "actionParams": {
                         "objectName": "鸟B默认",
@@ -658,12 +652,6 @@
                     }
                 },
                 {
-                    "actionType": "Wait",
-                    "actionParams": {
-                        "duration": 1
-                    }
-                },
-                {
                     "actionType": "PlayAnimation",
                     "actionParams": {
                         "objectName": "鸟C默认",
@@ -676,12 +664,6 @@
                     "actionParams": {
                         "objectName": "音符C-1",
                         "animationName": "NoteC",
-                        "duration": 1
-                    }
-                },
-                {
-                    "actionType": "Wait",
-                    "actionParams": {
                         "duration": 1
                     }
                 },

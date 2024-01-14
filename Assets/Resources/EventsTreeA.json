@@ -1250,7 +1250,7 @@
                 {
                     "actionType": "Wait",
                     "actionParams": {
-                        "duration": 30
+                        "duration": 10
                     }
                 },
                 {
